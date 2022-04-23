@@ -21,7 +21,6 @@ public class SortedArray {
 
         public static int[] sortIntegers(int[] array) {
             int[] sortedArray = Arrays.copyOf(array, array.length);
-
             boolean flag = true;
             int temp;
             while(flag) {
