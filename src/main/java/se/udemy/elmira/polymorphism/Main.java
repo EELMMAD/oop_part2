@@ -54,18 +54,20 @@ class StarWars extends  Movie{
         return "Imperial Forces try to take over universe";
     }
 }
-class Forgetable extends Movie {
-    public Forgetable() {
-        super("Forgetable");
+class Forgettable extends Movie {
+    public Forgettable() {
+        super("Forgettable");
     }
-
     //No plot method
 }
 
 
 public class Main {
     public static void main(String[] args) {
-
+        for(int i = 1; i < 11; i++){
+            Movie movie = randomMovie();
+            System.out.println("Movie # " + i + " : " +  "\n " + "Plot " + movie.plot() + " \n");
+        }
     }
 
     public static Movie randomMovie() {
@@ -85,8 +87,8 @@ public class Main {
                 return new StarWars();
 
             case 5:
-                return new Forgetable();
+                return new Forgettable();
         }
         return null;
-    }
+}
 }
